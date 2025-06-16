@@ -15,5 +15,19 @@ return {
      },
      config = function()
       vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
-     end
+      vim.keymap.set('n', '<C-j>', '<C-w><Left>', {})
+      vim.keymap.set('n', '<C-k>', '<C-w><Right>', {})
+      window = {
+        mappings = {
+          ["P"] = {
+            "toggle_preview",
+            config = {
+            use_float = false,
+          -- use_image_nvim = true,
+          -- title = 'Neo-tree Preview',
+            },
+        },
+      }
+    }
+    end
 }
